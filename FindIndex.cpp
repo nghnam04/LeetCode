@@ -7,7 +7,7 @@ Nếu không tìm thấy trả về -1
 */
     int strStr(string haystack, string needle) {
         int position = haystack.find(needle);
-        if(position == string::npos) return -1;
+        if(position == string::npos) return -1; //phương thức string::npos chỉ một vị trí không tồn tại(not position)
         return position;
     }
     int main(){
