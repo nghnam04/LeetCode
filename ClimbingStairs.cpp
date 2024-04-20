@@ -2,7 +2,8 @@
 using namespace std;
 //Hàm đếm số cách để đi được số bậc thang nhập vào từ bàn phím, mỗi bước đi 1 hoặc 2 bậc
 class Solution{
-    public:
+    public:\
+    //Số cách bước là chuỗi fibonacci
     int climbStairs(int n) {
         int secondLast = 1;
         int last = 1;
