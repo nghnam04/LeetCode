@@ -3,6 +3,7 @@
 int mySqrt(int x) {
      if (x == 0)
             return x;
+            //Sử dụng ctdl binary search tree
         int first = 1, last = x;
         while (first <= last) {
             int mid = first + (last - first) / 2;
