@@ -7,7 +7,7 @@ public:
     int singleNumber(vector<int>& nums) { 
        int ans=0;
 	   for(auto x:nums)
-	   ans^=x;
+	   ans^=x; //Thực hiện phép toán XOR giữa x và 0 (x^0=x; x^x=0) do vậy nên 2 số giống nhau sẽ triệu tiêu nhau
 	   return ans;
     }
 };
