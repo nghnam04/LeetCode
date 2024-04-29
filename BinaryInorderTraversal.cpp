@@ -16,13 +16,14 @@ class Solution {
 
    void traversal(TreeNode* root,vector<int>& arr){
 
-        if(root==NULL){
+        if(root==NULL){ //Cây rỗng thì dừng không duyệt
             return ;
         }
-        traversal(root->left,arr);
-        arr.push_back(root->val);
-        traversal(root->right,arr);
+        traversal(root->left,arr); //Duyệt cây bên trái
+        arr.push_back(root->val); //Rồi đến node root
+        traversal(root->right,arr); //Cuối cùng là cây bên phải
     }
+
 public:
     vector<int> inorderTraversal(TreeNode* root) {
          vector<int> arr;
@@ -31,9 +32,6 @@ public:
        return arr;
     }
 };
-
-#include <iostream>
-#include <vector>
 
 int main() {
     // Tạo cây nhị phân để kiểm thử
