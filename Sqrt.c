@@ -1,6 +1,6 @@
 #include<stdio.h>
 //Hàm tính căn bậc hai của một số, làm tròn chỉ lấy phần nguyên
-int mySqrt(int x) {
+ int mySqrt(int x) {
      if (x == 0)
             return x;
             //Sử dụng ctdl binary search tree
@@ -18,8 +18,9 @@ int mySqrt(int x) {
         }
         return last;
 }
-int main(){
+ int main(){
     int x;
+      int y;
     scanf("%d", &x);
     printf("%d", mySqrt(x));
     return 0;
