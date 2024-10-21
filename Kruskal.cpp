@@ -1,26 +1,29 @@
-//Find Minimum Spanning Tree
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
-struct Edge { int u, v, w; };
+struct Edge {
+    int u, v, w;
+};
 
+// Tìm cha của một đỉnh với path compression
 int find(int u, int parent[]) {
-    return (parent[u] == u) ? u : find(parent[u], parent);
+    if (parent[u] != u)
+        parent[u] = find(parent[u], parent);  // Path compression
+    return parent[u];
 }
 
-void sortEdges(Edge edges[], int M) {
-    for (int i = 0; i < M - 1; i++)
-        for (int j = 0; j < M - i - 1; j++)
-            if (edges[j].w > edges[j + 1].w)
-                swap(edges[j], edges[j + 1]);
+// Sắp xếp cạnh dựa trên trọng số
+bool compare(Edge a, Edge b) {
+    return a.w < b.w;
 }
 
 int main() {
     int N, M, mstWeight = 0;
     cin >> N >> M;
-    Edge edges[M];
+    vector<Edge> edges(M);
     for (int i = 0; i < M; i++)
         cin >> edges[i].u >> edges[i].v >> edges[i].w;
 
@@ -28,7 +31,8 @@ int main() {
     for (int i = 1; i <= N; i++)
         parent[i] = i;
 
-    sortEdges(edges, M);
+    // Sắp xếp cạnh theo trọng số bằng sort() của C++
+    sort(edges.begin(), edges.end(), compare);
 
     for (int i = 0; i < M; i++) {
         int rootU = find(edges[i].u, parent);
