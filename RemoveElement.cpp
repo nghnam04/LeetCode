@@ -24,9 +24,9 @@ int removeElement(vector<int>& nums, int val) {
     int main(){
         vector<int> nums ={0,1,2,2,3,0,4,2};
         int val=2;
-        cout << removeElement(nums, val) << endl;
+        cout << removeElement(nums, val) << endl; //In ra kích thước vector sau gọi hàm
         for(int i : nums){
-            cout << i;
+            cout << i << " "; //In ra vecto lúc sau
         }
         return 0;
     }

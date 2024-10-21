@@ -33,11 +33,12 @@ int main(void) {
 }
 */
 
-enum {MAX_WORD_LEN = 20}; 
+enum {MAX_WORD_LEN = 20};
 enum {MAX_LINE_LEN = 50}; 
 int IsWhitespace(int ch) { 
   return (ch == ' ') || (ch == '\n') || (ch == '\t'); 
 }
+
 int ReadWord(char *word) {  
    int ch, pos = 0; 
    ch = getchar(); 

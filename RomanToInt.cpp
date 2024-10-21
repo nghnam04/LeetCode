@@ -20,7 +20,7 @@ using namespace std;
         }
         return total;
     }
-
+    
     int main(){
         string roman;
         cin >> roman;

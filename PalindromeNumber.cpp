@@ -1,7 +1,7 @@
 #include<iostream>
 
 using namespace std;
-//Hàm kiểm tra xem 1 số khi reverse có chính là số đấy không
+//Hàm kiểm tra xem 1 số khi reverse có chính là số đấy không(Palindrome)
 bool isPalindrome(int x){ 
 if(x<0) return false;
 

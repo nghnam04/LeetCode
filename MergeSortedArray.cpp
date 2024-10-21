@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.hko>
 using namespace std;
 
 //Hàm trộn 2 mảng và sắp xếp theo thứ tự tăng dần

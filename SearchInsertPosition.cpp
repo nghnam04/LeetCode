@@ -11,10 +11,10 @@ public:
         int low=0;
         int high=nums.size();
         int mid;
-        if(target>nums[high-1]){
+        if(target>nums[high-1]){ //Nếu target lớn hơn các phần tử trong mảng thì trả về chỉ số phần tử cuối cùng
             return high;
         }
-        while(low<=high){
+        while(low<=high){ //Tìm chỉ số của target ở giữa mảng
               mid=(low+high)/2;
             if(nums[mid]==target){  
                 return mid;
